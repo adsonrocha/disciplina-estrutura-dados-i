@@ -16,6 +16,18 @@ import java.util.List;
 public class Ex1 {
   public static void main(String[] args) {
     String input = "ESTE EXERCICIO E MUITO FACIL";
+
+//    String[] letters = input.split("");
+//
+//    Stack<String> s = new Stack<>();
+//    for (String letter : letters)
+//      s.push(letter);
+//
+//    int size = s.size();
+//    for (int i = 0; i < size; i++) {
+//      System.out.print(s.pop());
+//    }
+
     String[] words = input.split(" ");
 
     List<Stack<String>> stacks = new ArrayList<>();
