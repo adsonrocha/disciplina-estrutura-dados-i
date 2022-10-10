@@ -59,22 +59,18 @@ export default class DoublyLinkedList extends LinkedList {
             let current = this.head;
             if (index === 0) {
                 this.head = this.head.next;
-                // if there is only one item, then we update tail as well //NEW
                 if (this.count === 1) {
-                    // {2}
                     this.tail = undefined;
                 } else {
                     this.head.prev = undefined;
                 }
             } else if (index === this.count - 1) {
-                // last item //NEW
                 current = this.tail;
                 this.tail = current.prev;
                 this.tail.next = undefined;
             } else {
                 current = this.getElementAt(index);
                 const previous = current.prev;
-                // link previous with current's next - skip it to remove
                 previous.next = current.next;
                 current.next.prev = previous; // NEW
             }
